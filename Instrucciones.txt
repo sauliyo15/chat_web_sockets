@@ -18,6 +18,8 @@
     - Añadir la libreria socket.io-client en el fihero index.html y crear la conexion al servidor dentro de body
 
 6. Lograr comunicación bidireccional cliente-servidor
+    - Reiniciar el servidor y recargar el navegador: mensaje log en el servidor y alerta en el navegador
+    
 7. Crear la interfaz del chat y enviar mensajes
 8. Reenviar los mensajes del chat en el servidor
 9. Recibir los mensajes en el chat
