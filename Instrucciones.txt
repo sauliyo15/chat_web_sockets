@@ -15,6 +15,8 @@
     - Añadir en index.js la dependencia socket.io e inicializar el servidor de sockets para escuchar las conexiones
 
 5. Añadir el cliente de socket.io al cliente web
+    - Añadir la libreria socket.io-client en el fihero index.html y crear la conexion al servidor dentro de body
+
 6. Lograr comunicación bidireccional cliente-servidor
 7. Crear la interfaz del chat y enviar mensajes
 8. Reenviar los mensajes del chat en el servidor

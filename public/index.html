@@ -10,8 +10,24 @@
       integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"
+      integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <h1>Mi Chat con Websockets</h1>
+
+    <script>
+        $(function() {
+            const socket = io.connect("http://localhost:3000");
+            socket.on("connect", function() {
+                alert("Conectado!!");
+            })
+        });
+    </script>
   </body>
 </html>
