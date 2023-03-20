@@ -3,7 +3,14 @@
     - Instalar las dependencias indicadas en el fichero (npm install express y socket.io) (npm install)
 
 2. Crear el servidor web
+    - Utilizar el framework express
+    - Creacion del fichero index.js
+    - Arrancar el servidor con npm start y comprobar funcionamiento en el navegador (localhost 3000)
+
 3. Crear el cliente web
+    - Alojar el cliente web: crear directorio public y dentro el fichero index.html
+    - Importamos jQuery
+    
 4. Añadir el servidor de socket.io al servidor web
 5. Añadir el cliente de socket.io al cliente web
 6. Lograr comunicación bidireccional cliente-servidor
