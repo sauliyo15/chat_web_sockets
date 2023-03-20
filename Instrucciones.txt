@@ -1,0 +1,15 @@
+1. Instalar las dependencias
+    - Crear el fichero package.json (npm init -y)
+    - Instalar las dependencias indicadas en el fichero (npm install express y socket.io)
+
+2. Crear el servidor web
+3. Crear el cliente web
+4. Añadir el servidor de socket.io al servidor web
+5. Añadir el cliente de socket.io al cliente web
+6. Lograr comunicación bidireccional cliente-servidor
+7. Crear la interfaz del chat y enviar mensajes
+8. Reenviar los mensajes del chat en el servidor
+9. Recibir los mensajes en el chat
+10. Añadir nombres de usuario
+11. Crear avisos cuando alguien se conecta
+12. Crear avisos cuando alguien se desconecta
