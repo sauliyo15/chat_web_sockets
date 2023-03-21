@@ -38,7 +38,7 @@
         const nombre = prompt("Cuál es tu nombre?");
 
         //Creamos el socket de conexion
-        const socket = io.connect("http://192.168.1.133:3000");
+        const socket = io.connect();
 
         //Evento de conexion
         socket.on("connect", function () {
