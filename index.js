@@ -14,7 +14,7 @@ app.get('*', function(req, res, next) {
 
 //El servidor escucha en el puerto 3000
 http.listen(port, () => {
-    console.log('Abre el navegador en http://localhost:' + port);
+    console.log('Abre el navegador en http://192.168.1.133:' + port);
 });
 
 //Escuchamos cada nueva conexion

@@ -28,8 +28,10 @@
     - Recoger el mensaje enviado desde index.html en el servidor y reenviarlo a todos los clientes conectados
     - Escuchar el evento en index.js con el mismo nombre que se programo en el index.html
     - Emitir un nuevo evento con el mensaje recibido para mandarselo a todos los participantes
-    
+
 9. Recibir los mensajes en el chat
+    - Escuchar el evento emitido que se recibe del servidor e incluir el contenido recibido a la lista de mensajes
+    
 10. Añadir nombres de usuario
 11. Crear avisos cuando alguien se conecta
 12. Crear avisos cuando alguien se desconecta
