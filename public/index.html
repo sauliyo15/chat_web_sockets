@@ -35,6 +35,8 @@
     <script>
       $(function () {
 
+        const nombre = prompt("Cuál es tu nombre?");
+
         //Creamos el socket de conexion
         const socket = io.connect("http://192.168.1.133:3000");
 
@@ -48,7 +50,7 @@
           if ($("#mensaje").val()) {
 
             //Emitimos evento hacia el servidor con el mensaje
-            socket.emit("mensaje_enviado", { content: $("#mensaje").val() });
+            socket.emit("mensaje_enviado", { content: $("#mensaje").val(), usuario: nombre });
             $("#mensaje").val("");
           }
           return false;
@@ -56,7 +58,7 @@
 
         //Evento que recibe un evento del servidor
         socket.on("mensaje_recibido", function (mensaje) {
-          $("#mensajes").append(`<li>${mensaje.content}</li>`);
+          $("#mensajes").append(`<li><strong>${mensaje.usuario}: </strong>${mensaje.content}</li>`);
         });
       });
     </script>

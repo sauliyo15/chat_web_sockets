@@ -31,7 +31,9 @@
 
 9. Recibir los mensajes en el chat
     - Escuchar el evento emitido que se recibe del servidor e incluir el contenido recibido a la lista de mensajes
-    
+
 10. Añadir nombres de usuario
+    - Antes de inializar la conexion de sockets añadimos en el index.html la pregunta al usuario para almacenar su nombre y mostrar su nombre cada vez que envie un mensaje
+
 11. Crear avisos cuando alguien se conecta
 12. Crear avisos cuando alguien se desconecta
