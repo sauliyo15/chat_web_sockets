@@ -21,13 +21,32 @@
   <body>
     <h1>Mi Chat con Websockets</h1>
 
+    <ul id="mensajes"></ul>
+
+    <form action="">
+      <input
+        id="mensaje"
+        autocomplete="off"
+        placeholder="Empieza a escribir..."
+      />
+      <button id="enviar" type="submit" title="Envia un mensaje">Enviar</button>
+    </form>
+
     <script>
-        $(function() {
-            const socket = io.connect("http://localhost:3000");
-            socket.on("connect", function() {
-                alert("Conectado!!");
-            })
+      $(function () {
+        const socket = io.connect("http://localhost:3000");
+        socket.on("connect", function () {
+          alert("Conectado!!");
         });
+      });
+
+      $('form').submit(function() {
+        if ($('#mensaje').val()) {
+          socket.emit('mensaje_enviado', {content: $('#mensaje').val()});
+          $('#mensaje').val('');
+        }
+        return false;
+      });
     </script>
   </body>
 </html>
