@@ -34,22 +34,30 @@
 
     <script>
       $(function () {
+
+        //Creamos el socket de conexion
         const socket = io.connect("http://192.168.1.133:3000");
+
+        //Evento de conexion
         socket.on("connect", function () {
           alert("Conectado!!");
         });
-      });
 
-      $('form').submit(function() {
-        if ($('#mensaje').val()) {
-          socket.emit('mensaje_enviado', {content: $('#mensaje').val()});
-          $('#mensaje').val('');
-        }
-        return false;
-      });
+        //Pulsacion de boton
+        $("form").submit(function () {
+          if ($("#mensaje").val()) {
 
-      socket.on("mensaje_recibido", function(mensaje) {
-        $('#mensajes').append(`<li>${mensaje.content}</li>`);
+            //Emitimos evento hacia el servidor con el mensaje
+            socket.emit("mensaje_enviado", { content: $("#mensaje").val() });
+            $("#mensaje").val("");
+          }
+          return false;
+        });
+
+        //Evento que recibe un evento del servidor
+        socket.on("mensaje_recibido", function (mensaje) {
+          $("#mensajes").append(`<li>${mensaje.content}</li>`);
+        });
       });
     </script>
   </body>
