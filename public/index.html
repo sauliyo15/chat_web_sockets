@@ -60,6 +60,11 @@
         socket.on("mensaje_recibido", function (mensaje) {
           $("#mensajes").append(`<li><strong>${mensaje.usuario}: </strong>${mensaje.content}</li>`);
         });
+
+        //Evento nuevo miembro
+        socket.on("nuevo_miembro", function () {
+          $("#mensajes").append(`<li class="announcement">Alguien se ha unido a la conversacion</li>`);
+        });
       });
     </script>
   </body>

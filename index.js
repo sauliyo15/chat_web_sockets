@@ -21,6 +21,9 @@ http.listen(port, () => {
 io.on('connection', function(socket) {
     console.log('Nueva conexion');
 
+    //Emitimos un evento hacia todos los participantes cada vez que se recibe una conexion
+    io.emit('nuevo_miembro');
+
     //Escuchamos cada evento (de enviar mensajes)
     socket.on('mensaje_enviado', function(mensaje) {
 
