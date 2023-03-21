@@ -23,7 +23,12 @@
 7. Crear la interfaz del chat y enviar mensajes
     - Añadir elementos HTML en el body de index.html: una lista y un formulario con una caja de texto y un boton
     - Añadir dentro del script en index.html el evento de enviar el mensaje con la pulsacion (submit) del boton del formulario
+
 8. Reenviar los mensajes del chat en el servidor
+    - Recoger el mensaje enviado desde index.html en el servidor y reenviarlo a todos los clientes conectados
+    - Escuchar el evento en index.js con el mismo nombre que se programo en el index.html
+    - Emitir un nuevo evento con el mensaje recibido para mandarselo a todos los participantes
+    
 9. Recibir los mensajes en el chat
 10. Añadir nombres de usuario
 11. Crear avisos cuando alguien se conecta

@@ -20,4 +20,11 @@ http.listen(port, () => {
 //Escuchamos cada nueva conexion
 io.on('connection', function(socket) {
     console.log('Nueva conexion');
+
+    //Escuchamos cada evento (de enviar mensajes)
+    socket.on('mensaje_enviado', function(mensaje) {
+
+        //Se emite evento para reenviar el mensaje a todos los participantes
+        io.emit('mensaje_recibido', mensaje);
+    });
 });
