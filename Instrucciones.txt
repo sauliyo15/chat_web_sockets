@@ -38,4 +38,6 @@
 11. Crear avisos cuando alguien se conecta
     - Lanzar un nuevo mensaje a todos los participantes cada vez que haya una nueva conexion. Emitimos un evento el servidor hacia el cliente
     - Recogemos el evento emitido en el servidor en el index.html
+
 12. Crear avisos cuando alguien se desconecta
+    - Escuchar el evento de desconexion (automatico cuando un cliente se cierra) y emitir evento para mandar mensaje al resto

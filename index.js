@@ -30,4 +30,11 @@ io.on('connection', function(socket) {
         //Se emite evento para reenviar el mensaje a todos los participantes
         io.emit('mensaje_recibido', mensaje);
     });
+
+    //Escuchamos el evento de desconexion
+    socket.on('disconnect', function(mensaje) {
+
+        //Emitimos un evento hacia todos los participantes cada vez que se recibe una desconexion
+        io.emit('miembro_salido');
+    })
 });

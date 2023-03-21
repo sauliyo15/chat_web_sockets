@@ -65,6 +65,11 @@
         socket.on("nuevo_miembro", function () {
           $("#mensajes").append(`<li class="announcement">Alguien se ha unido a la conversacion</li>`);
         });
+
+        //Evento nuevo miembro
+        socket.on("miembro_salido", function () {
+          $("#mensajes").append(`<li class="announcement">Alguien ha abandonado la conversacion</li>`);
+        });
       });
     </script>
   </body>
